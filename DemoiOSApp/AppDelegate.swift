@@ -19,9 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+        var vc: UIViewController?
         
-        let nc = UINavigationController.init(rootViewController: vc)
+//        if Userdefault.getToken() == nil{
+//              vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+//        }else{
+//              vc = storyBoard.instantiateViewController(withIdentifier: "HomeTabViewController")
+//        }
+        
+       
+        vc = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+        let nc = UINavigationController.init(rootViewController: vc!)
         
         window?.rootViewController = nc
         

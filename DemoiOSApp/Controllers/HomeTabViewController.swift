@@ -8,8 +8,11 @@
 
 import UIKit
 import Alamofire
+import CoreData
 
 class HomeTabViewController: UITabBarController {
+    
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +78,14 @@ extension HomeTabViewController: SendData,UITabBarControllerDelegate{
         
         let listVC = self.viewControllers?.first as? ListViewController
         listVC?.userObject.append(object)
+        let saveObjects = ListService(context: self.context!)
+        
+        if let imgData = object.image.pngData(){
+          
+            saveObjects.create(title: object.title, desc: object.description, image: imgData)
+            saveObjects.saveChanges()
+        }
+        
         listVC?.listTable.reloadData()
 
     }

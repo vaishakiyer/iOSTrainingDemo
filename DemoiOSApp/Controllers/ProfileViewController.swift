@@ -59,6 +59,7 @@ class ProfileViewController: UIViewController {
     
     
     @objc func signOutPressed(){
+        
         Userdefault.clearToken()
         Userdefault.removeUserObj()
         self.dismiss(animated: true, completion: nil)

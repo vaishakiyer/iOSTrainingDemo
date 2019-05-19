@@ -7,22 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 struct MyObject{
-    
+
     var title: String
     var description : String
     var image: UIImage
-    
+
 }
+
 
 class ListViewController: UIViewController {
     
     var userObject = [MyObject]()
+    
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
     @IBOutlet weak var listTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let objectService = ListService(context: self.context!)
+        userObject = objectService.getAll()
         
         listTable.delegate = self
         listTable.dataSource = self
@@ -116,8 +124,13 @@ extension ListViewController: UITableViewDelegate,UITableViewDataSource{
         
         let indexSet = IndexSet(arrayLiteral: indexPath.section)
         if editingStyle == .delete{
+            
+            let objectService = ListService(context: self.context!)
+            objectService.delete(object: userObject[indexPath.section])
+            objectService.saveChanges()
             userObject.remove(at: indexPath.section)
             listTable.deleteSections(indexSet, with: .fade)
+            
         }
         
     }

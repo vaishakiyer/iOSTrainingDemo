@@ -46,21 +46,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="trt-P2-LVT">
-                                <rect key="frame" x="90.666666666666686" y="478" width="194" height="39"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="trt-P2-LVT">
+                                <rect key="frame" x="75.666666666666686" y="478" width="224" height="57"/>
                                 <subviews>
                                     <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLO-FF-qPS">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sp-JP-hjQ">
-                                        <rect key="frame" x="115" y="0.0" width="79" height="39"/>
+                                        <rect key="frame" x="115" y="0.0" width="109" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -94,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="136.80000000000001" y="129.31034482758622"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="w51-Ud-Gdj">
@@ -167,6 +169,23 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="813.61607142857144"/>
         </scene>
+        <!--Gallery-->
+        <scene sceneID="5Qi-2Z-RF4">
+            <objects>
+                <viewController id="iv0-f3-m4y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fN0-dh-xeN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="OWb-vx-Hjn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gallery" id="R7x-eo-C3y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2r-Fs-a20" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="1105"/>
+        </scene>
         <!--PROFILE-->
         <scene sceneID="f88-DF-fKF">
             <objects>
@@ -183,7 +202,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-ro-t1C">
-                                <rect key="frame" x="146.33333333333334" y="393.66666666666669" width="82.666666666666657" height="45"/>
+                                <rect key="frame" x="146" y="393.66666666666669" width="83" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Gfa-QI-fxZ"/>
                                 </constraints>
@@ -192,7 +211,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lva-aY-oqb">
-                                <rect key="frame" x="146.33333333333334" y="468.66666666666669" width="82.666666666666657" height="45.000000000000057"/>
+                                <rect key="frame" x="146" y="468.66666666666669" width="83" height="45.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="uxu-rv-iHj"/>
                                 </constraints>
@@ -201,7 +220,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbj-fR-eeb">
-                                <rect key="frame" x="146.33333333333334" y="538.66666666666663" width="82.666666666666657" height="45"/>
+                                <rect key="frame" x="146" y="538.66666666666663" width="83" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="dyC-RI-rAt"/>
                                 </constraints>
@@ -243,7 +262,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SFP-rY-GBB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PROFILE" id="mi9-Jr-321"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="Group 382" id="mi9-Jr-321"/>
                     <connections>
                         <outlet property="avatar" destination="UvG-2g-Mok" id="JX4-63-8bu"/>
                         <outlet property="emailLogged" destination="j8v-ro-t1C" id="aXr-Cs-zY3"/>
@@ -321,7 +340,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bu9-tv-uR6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="HOME" id="eZD-9g-CAb"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="Group 381" id="eZD-9g-CAb"/>
                     <connections>
                         <outlet property="listTable" destination="Qkg-6K-hxd" id="JVg-e0-YCj"/>
                     </connections>
@@ -362,9 +381,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9dO-zP-sFC" firstAttribute="trailing" secondItem="E8v-Vl-7x3" secondAttribute="trailing" constant="64" id="3X4-Tt-CqA"/>
+                            <constraint firstItem="OO7-bK-IYx" firstAttribute="top" secondItem="9dO-zP-sFC" secondAttribute="top" constant="118" id="GB0-Ii-hiG"/>
                             <constraint firstItem="E8v-Vl-7x3" firstAttribute="leading" secondItem="9dO-zP-sFC" secondAttribute="leading" constant="65" id="IfA-BR-DI7"/>
                             <constraint firstItem="9dO-zP-sFC" firstAttribute="trailing" secondItem="eiO-Dh-Cmd" secondAttribute="trailing" constant="64" id="UVi-ZF-A6q"/>
-                            <constraint firstItem="OO7-bK-IYx" firstAttribute="top" secondItem="9dO-zP-sFC" secondAttribute="top" constant="118" id="WVx-16-XhL"/>
                             <constraint firstItem="9dO-zP-sFC" firstAttribute="bottom" secondItem="E8v-Vl-7x3" secondAttribute="bottom" constant="106" id="aXS-H7-cyp"/>
                             <constraint firstItem="OO7-bK-IYx" firstAttribute="leading" secondItem="9dO-zP-sFC" secondAttribute="leading" constant="102" id="f2a-dC-ZYs"/>
                             <constraint firstItem="eiO-Dh-Cmd" firstAttribute="top" secondItem="OO7-bK-IYx" secondAttribute="bottom" constant="101" id="hzZ-0i-Ppv"/>
@@ -396,6 +415,7 @@
                     <connections>
                         <segue destination="N37-8y-V80" kind="relationship" relationship="viewControllers" id="UcD-Qx-yNw"/>
                         <segue destination="CED-C2-eL5" kind="relationship" relationship="viewControllers" id="ZYy-lO-GRm"/>
+                        <segue destination="iv0-f3-m4y" kind="relationship" relationship="viewControllers" id="13c-pJ-kz9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rh-Wa-67a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,5 +425,7 @@
     </scenes>
     <resources>
         <image name="A ship in Balestrand" width="320" height="449"/>
+        <image name="Group 381" width="13" height="18"/>
+        <image name="Group 382" width="16" height="11"/>
     </resources>
 </document>

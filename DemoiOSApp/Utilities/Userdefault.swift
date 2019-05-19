@@ -22,8 +22,8 @@ class Userdefault{
         sharedInstance.synchronize()
     }
     
-    class func getToken() -> String{
-        return sharedInstance.value(forKey: kToken) as! String
+    class func getToken() -> String?{
+        return sharedInstance.value(forKey: kToken) as? String
     }
     
     class func clearToken() {

@@ -40,14 +40,16 @@ class LoginViewController: UIViewController {
         
         email.delegate = self
         password.delegate = self
-        email.addImageAndPlaceHolder(img: "Group 381", placeHolder: "EMAIL ID")
-        password.addImageAndPlaceHolder(img: "Group 382", placeHolder: "PASSWORD")
+        email.addImageAndPlaceHolder(img: "Group 382", placeHolder: "EMAIL ID")
+        password.addImageAndPlaceHolder(img: "Group 381", placeHolder: "PASSWORD")
         
         Helper.addLineToView(view: email, position: .LINE_POSITION_BOTTOM, color: .white, width: 0.5)
         Helper.addLineToView(view: password, position: .LINE_POSITION_BOTTOM, color: .white, width: 0.5)
         
         signIn.layer.cornerRadius = 10
         registerBtn.layer.cornerRadius = 10
+       
+        
         
         
         signIn.addTarget(self, action: #selector(signInPress), for: .touchUpInside)
