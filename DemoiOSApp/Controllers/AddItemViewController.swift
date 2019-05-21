@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SendData {
+protocol SendData: AnyObject{
     func valuesToBePopulated(object: MyObject)
 }
 
@@ -19,7 +19,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var titleTxt: UITextField!
     @IBOutlet weak var descTxt: UITextView!
     
-    var delegate: SendData?
+    weak var delegate: SendData?
     var objCreated =  MyObject(title: "", description: "", image: UIImage(named: "A ship in Balestrand")!)
     var imagePicker: UIImagePickerController!
     

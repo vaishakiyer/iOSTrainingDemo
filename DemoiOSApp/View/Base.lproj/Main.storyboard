@@ -172,19 +172,88 @@
         <!--Gallery-->
         <scene sceneID="5Qi-2Z-RF4">
             <objects>
-                <viewController id="iv0-f3-m4y" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iv0-f3-m4y" customClass="GalleryViewController" customModule="DemoiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fN0-dh-xeN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="20W-2v-vNS">
+                                <rect key="frame" x="37" y="106" width="301" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="TA2-wa-DSf">
+                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="300"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-Q7-DQR">
+                                                <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="InW-MR-9Kz">
+                                                <rect key="frame" x="0.0" y="150" width="150.66666666666666" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VMH-gh-Ky8">
+                                        <rect key="frame" x="150.66666666666663" y="0.0" width="150.33333333333337" height="300"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XzZ-fC-DZP">
+                                                <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="150"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-Q1-neI">
+                                                <rect key="frame" x="0.0" y="150" width="150.33333333333334" height="150"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="20W-2v-vNS" secondAttribute="height" multiplier="301:300" id="bEY-Rg-gTy"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndL-7Y-6nu">
+                                <rect key="frame" x="123" y="595" width="123" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start Operations">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startOprPressed:" destination="iv0-f3-m4y" eventType="touchUpInside" id="qbk-Q9-D5d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-Nw-FF2">
+                                <rect key="frame" x="123" y="642" width="123" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cancel Operation">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelOprPressed:" destination="iv0-f3-m4y" eventType="touchUpInside" id="5c2-hd-vRL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ndL-7Y-6nu" firstAttribute="leading" secondItem="OWb-vx-Hjn" secondAttribute="leading" constant="123" id="5JR-n0-pfJ"/>
+                            <constraint firstItem="OWb-vx-Hjn" firstAttribute="bottom" secondItem="Afi-Nw-FF2" secondAttribute="bottom" constant="57" id="HHG-Il-p6S"/>
+                            <constraint firstItem="OWb-vx-Hjn" firstAttribute="trailing" secondItem="20W-2v-vNS" secondAttribute="trailing" constant="37" id="USR-v2-uEh"/>
+                            <constraint firstItem="OWb-vx-Hjn" firstAttribute="trailing" secondItem="ndL-7Y-6nu" secondAttribute="trailing" constant="129" id="WVa-M8-oc4"/>
+                            <constraint firstItem="20W-2v-vNS" firstAttribute="top" secondItem="OWb-vx-Hjn" secondAttribute="top" constant="62" id="brl-aa-M0l"/>
+                            <constraint firstItem="20W-2v-vNS" firstAttribute="leading" secondItem="OWb-vx-Hjn" secondAttribute="leading" constant="37" id="pKQ-uq-wN9"/>
+                            <constraint firstItem="Afi-Nw-FF2" firstAttribute="top" secondItem="ndL-7Y-6nu" secondAttribute="bottom" constant="17" id="t1M-8Q-5dm"/>
+                            <constraint firstItem="Afi-Nw-FF2" firstAttribute="leading" secondItem="OWb-vx-Hjn" secondAttribute="leading" constant="123" id="xR3-Gu-ixQ"/>
+                            <constraint firstItem="OWb-vx-Hjn" firstAttribute="trailing" secondItem="Afi-Nw-FF2" secondAttribute="trailing" constant="129" id="z3L-op-vnq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="OWb-vx-Hjn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" id="R7x-eo-C3y"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="task-complete-2" id="R7x-eo-C3y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="img1" destination="AkR-Q7-DQR" id="nb5-F4-Ap5"/>
+                        <outlet property="img2" destination="InW-MR-9Kz" id="20g-G7-F1M"/>
+                        <outlet property="img3" destination="XzZ-fC-DZP" id="Q4x-qa-0tY"/>
+                        <outlet property="img4" destination="wgg-Q1-neI" id="LEf-i2-98f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2r-Fs-a20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="1105"/>
+            <point key="canvasLocation" x="968.79999999999995" y="1104.6798029556651"/>
         </scene>
         <!--PROFILE-->
         <scene sceneID="f88-DF-fKF">
@@ -197,8 +266,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A ship in Balestrand" translatesAutoresizingMaskIntoConstraints="NO" id="UvG-2g-Mok">
                                 <rect key="frame" x="117" y="159" width="141" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="141" id="Fud-gQ-NiI"/>
-                                    <constraint firstAttribute="width" constant="141" id="tC2-12-N1B"/>
+                                    <constraint firstAttribute="width" secondItem="UvG-2g-Mok" secondAttribute="height" multiplier="1:1" id="8TA-mN-l0l"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-ro-t1C">
@@ -262,7 +330,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SFP-rY-GBB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="Group 382" id="mi9-Jr-321"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="user-2" id="mi9-Jr-321"/>
                     <connections>
                         <outlet property="avatar" destination="UvG-2g-Mok" id="JX4-63-8bu"/>
                         <outlet property="emailLogged" destination="j8v-ro-t1C" id="aXr-Cs-zY3"/>
@@ -340,7 +408,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bu9-tv-uR6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="HOME" image="Group 381" id="eZD-9g-CAb"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="home-7" id="eZD-9g-CAb"/>
                     <connections>
                         <outlet property="listTable" destination="Qkg-6K-hxd" id="JVg-e0-YCj"/>
                     </connections>
@@ -425,7 +493,8 @@
     </scenes>
     <resources>
         <image name="A ship in Balestrand" width="320" height="449"/>
-        <image name="Group 381" width="13" height="18"/>
-        <image name="Group 382" width="16" height="11"/>
+        <image name="home-7" width="32" height="32"/>
+        <image name="task-complete-2" width="32" height="32"/>
+        <image name="user-2" width="32" height="32"/>
     </resources>
 </document>

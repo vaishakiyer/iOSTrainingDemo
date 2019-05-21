@@ -94,8 +94,10 @@ extension HomeTabViewController: SendData,UITabBarControllerDelegate{
         
         if tabBarController.selectedIndex == 0{
             self.navigationItem.title = "List of Random Items"
-        }else{
+        }else  if tabBarController.selectedIndex == 1{
             self.navigationItem.title = "My Profile"
+        }else{
+             self.navigationItem.title = "Gallery"
         }
         
     }
