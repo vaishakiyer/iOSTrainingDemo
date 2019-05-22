@@ -38,5 +38,5 @@ class Spinner{
             spinner = nil
         }
     }
-
+    
 }

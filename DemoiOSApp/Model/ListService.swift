@@ -33,12 +33,12 @@ class ListService{
         //return newItem!
     }
     
-   
+    
     
     func delete(object: MyObject){
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Topic")
-    
+        
         do {
             
             let response = try context.fetch(fetchRequest) as? [Topic]
@@ -55,7 +55,7 @@ class ListService{
             
         }
         
-       
+        
         
     }
     
@@ -67,7 +67,7 @@ class ListService{
             print(error)
         }
     }
-
+    
     
     func get(withPredicate queryPredicate: NSPredicate) -> [Topic]{
         

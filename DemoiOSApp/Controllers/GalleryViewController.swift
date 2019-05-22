@@ -27,20 +27,20 @@ class GalleryViewController: UIViewController {
         "http://s1.ax1x.com/2017/12/06/oaiz8.png",
         "https://www.planetware.com/photos-large/USAZ/arizona-monument-valley-buttes-and-red-sand.jpg"
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         
         // Do any additional setup after loading the view.
     }
     
-   
+    
     @IBAction func startOprPressed(_ sender: UIButton) {
         
         let operation1 = BlockOperation{
-          let img1 =  self.downloader(imgName: self.imagesToDownload[0])
+            let img1 =  self.downloader(imgName: self.imagesToDownload[0])
             OperationQueue.main.addOperation {
                 self.img1.image = img1
             }
@@ -89,16 +89,16 @@ class GalleryViewController: UIViewController {
         
         let data = try? Data(contentsOf: URL(string: imgName)!)
         return UIImage(data: data!)!
-      
+        
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

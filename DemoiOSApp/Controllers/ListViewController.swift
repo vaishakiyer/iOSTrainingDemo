@@ -10,11 +10,11 @@ import UIKit
 import CoreData
 
 struct MyObject{
-
+    
     var title: String
     var description : String
     var image: UIImage
-
+    
 }
 
 
@@ -23,7 +23,7 @@ class ListViewController: UIViewController {
     var userObject = [MyObject]()
     
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-
+    
     @IBOutlet weak var listTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class ListViewController: UIViewController {
     }
     
     func createEmptyText(message: String){
-      
+        
         let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         let messageLabel = UILabel(frame: rect)
         messageLabel.text = message
@@ -57,19 +57,19 @@ class ListViewController: UIViewController {
         
         listTable.backgroundView = messageLabel;
         listTable.separatorStyle = .none;
+        
+    }
     
-    }
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension ListViewController: UITableViewDelegate,UITableViewDataSource{

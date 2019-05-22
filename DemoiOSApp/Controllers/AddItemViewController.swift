@@ -13,7 +13,7 @@ protocol SendData: AnyObject{
 }
 
 class AddItemViewController: UIViewController {
-
+    
     @IBOutlet weak var addedImg: UIImageView!
     
     @IBOutlet weak var titleTxt: UITextField!
@@ -42,7 +42,7 @@ class AddItemViewController: UIViewController {
         addedImg.layer.cornerRadius = addedImg.frame.width / 2
         self.navigationItem.title = "Add Items"
         
-         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissMe))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissMe))
         
         let rb1 = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(openActionsheet))
         
@@ -58,7 +58,7 @@ class AddItemViewController: UIViewController {
     }
     
     
-   @objc func openActionsheet(){
+    @objc func openActionsheet(){
         let actionVC = UIAlertController(title: "Choose you option", message: "", preferredStyle: .actionSheet)
         
         imagePicker =  UIImagePickerController()
@@ -82,7 +82,7 @@ class AddItemViewController: UIViewController {
         
         self.present(actionVC, animated: true, completion: nil)
     }
-
+    
     
     @objc func doneClicked(){
         
@@ -90,7 +90,7 @@ class AddItemViewController: UIViewController {
         objCreated.description = descTxt.text!
         delegate?.valuesToBePopulated(object: objCreated)
         self.dismiss(animated: true, completion: nil)
-    
+        
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -103,15 +103,15 @@ class AddItemViewController: UIViewController {
         self.view.frame.origin.y = 0
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension AddItemViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
@@ -127,9 +127,9 @@ extension AddItemViewController: UIImagePickerControllerDelegate,UINavigationCon
         objCreated.image = selectedImage
         addedImg.image = selectedImage
     }
-        
-        
-    }
+    
+    
+}
 
 extension AddItemViewController: UITextFieldDelegate,UITextViewDelegate{
     
