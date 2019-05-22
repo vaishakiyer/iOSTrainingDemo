@@ -471,6 +471,21 @@
             </objects>
             <point key="canvasLocation" x="2789.5999999999999" y="-194.33497536945814"/>
         </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="wDg-W1-z5J">
+            <objects>
+                <viewController storyboardIdentifier="MapsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zpt-1p-NNL" customClass="MapsViewController" customModule="DemoiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jpj-u8-2Nl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="p1r-Pa-QSQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Fd-im-tYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3872" y="132"/>
+        </scene>
         <!--Home Tab View Controller-->
         <scene sceneID="AGe-zI-GwX">
             <objects>

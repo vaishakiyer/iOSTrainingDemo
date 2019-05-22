@@ -12,6 +12,7 @@
 		521308BD228C11CD00314736 /* Userdefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521308BC228C11CD00314736 /* Userdefault.swift */; };
 		521308BF228C169700314736 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521308BE228C169700314736 /* User.swift */; };
 		521308C5228C57DE00314736 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521308C4228C57DE00314736 /* Spinner.swift */; };
+		52280CE82295068900D5C5D7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52280CE72295068900D5C5D7 /* MapsViewController.swift */; };
 		522EF77D229260A600A40E0E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522EF77C229260A600A40E0E /* GalleryViewController.swift */; };
 		525977A6228D3A8100D2B84B /* ListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525977A5228D3A8100D2B84B /* ListService.swift */; };
 		52C5F083228BCEB400A0EB81 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5F082228BCEB400A0EB81 /* ListViewController.swift */; };
@@ -58,6 +59,7 @@
 		521308BC228C11CD00314736 /* Userdefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Userdefault.swift; sourceTree = "<group>"; };
 		521308BE228C169700314736 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		521308C4228C57DE00314736 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		52280CE72295068900D5C5D7 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		522EF77C229260A600A40E0E /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		525977A5228D3A8100D2B84B /* ListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListService.swift; sourceTree = "<group>"; };
 		52C5F082228BCEB400A0EB81 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				52C5F08C228BD05E00A0EB81 /* DetailViewController.swift */,
 				521308B8228BE1AE00314736 /* RegisterViewController.swift */,
 				522EF77C229260A600A40E0E /* GalleryViewController.swift */,
+				52280CE72295068900D5C5D7 /* MapsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				52D4040A228BC94F00C428BC /* Frameworks */,
 				52D4040B228BC94F00C428BC /* Resources */,
 				858FBB66E1A9DE9A27AC8D42 /* [CP] Embed Pods Frameworks */,
+				404371B1AF5F051E52D261F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -389,6 +393,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		404371B1AF5F051E52D261F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DemoiOSApp/Pods-DemoiOSApp-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DemoiOSApp/Pods-DemoiOSApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		55DFF4DC5B8031DEC458D15B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +493,7 @@
 				521308BF228C169700314736 /* User.swift in Sources */,
 				525977A6228D3A8100D2B84B /* ListService.swift in Sources */,
 				521308B7228BD6D100314736 /* DesignableUITextField.swift in Sources */,
+				52280CE82295068900D5C5D7 /* MapsViewController.swift in Sources */,
 				521308B9228BE1AE00314736 /* RegisterViewController.swift in Sources */,
 				52C5F089228BD04000A0EB81 /* ProfileViewController.swift in Sources */,
 				521308C5228C57DE00314736 /* Spinner.swift in Sources */,

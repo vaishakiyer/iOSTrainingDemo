@@ -18,7 +18,9 @@ class HomeTabViewController: UITabBarController {
         super.viewDidLoad()
         
         self.delegate = self
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(navigate))
+        let mapsButton = UIBarButtonItem(title: "Maps", style: .done, target: self, action: #selector(openMaps))
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(navigate))
+        self.navigationItem.rightBarButtonItems = [addButton,mapsButton]
         
         self.navigationItem.title = "List of Random Items"
         
@@ -28,7 +30,7 @@ class HomeTabViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
-   
+    
     
     @objc func navigate(){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -37,9 +39,21 @@ class HomeTabViewController: UITabBarController {
         let nc = UINavigationController.init(rootViewController: vc)
         self.present(nc, animated: true, completion: nil)
     }
-
+    
+    @objc func openMaps(){
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var vc: UIViewController?
+        
+        vc = storyBoard.instantiateViewController(withIdentifier: "MapsViewController")
+        let nc = UINavigationController.init(rootViewController: vc!)
+        self.present(nc, animated: true, completion: nil)
+        
+    }
+    
     func fetchUser(){
-      
+        
         AF.request(URL(string: "https://reqres.in/api/users/2")!).responseJSON { (response) in
             
             switch response.result{
@@ -49,7 +63,7 @@ class HomeTabViewController: UITabBarController {
                 
                 guard let myData = (JSON as? NSDictionary)?.value(forKey: "data") as? NSDictionary else {return}
                 Userdefault.setLoggedInUserDict(myData)
-            
+                
             case .failure(let error):
                 print(error)
             }
@@ -57,20 +71,20 @@ class HomeTabViewController: UITabBarController {
             
         }
         
-   
+        
         
         
     }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension HomeTabViewController: SendData,UITabBarControllerDelegate{
@@ -81,13 +95,13 @@ extension HomeTabViewController: SendData,UITabBarControllerDelegate{
         let saveObjects = ListService(context: self.context!)
         
         if let imgData = object.image.pngData(){
-          
+            
             saveObjects.create(title: object.title, desc: object.description, image: imgData)
             saveObjects.saveChanges()
         }
         
         listVC?.listTable.reloadData()
-
+        
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController){
@@ -97,7 +111,7 @@ extension HomeTabViewController: SendData,UITabBarControllerDelegate{
         }else  if tabBarController.selectedIndex == 1{
             self.navigationItem.title = "My Profile"
         }else{
-             self.navigationItem.title = "Gallery"
+            self.navigationItem.title = "Gallery"
         }
         
     }

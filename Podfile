@@ -7,6 +7,8 @@ target 'DemoiOSApp' do
 
   # Pods for DemoiOSApp
   pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
  
 
   target 'DemoiOSAppTests' do
