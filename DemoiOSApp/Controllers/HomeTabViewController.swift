@@ -26,6 +26,7 @@ class HomeTabViewController: UITabBarController {
         
         fetchUser()
         
+        addingAnObserever()
         
         // Do any additional setup after loading the view.
     }
@@ -70,10 +71,18 @@ class HomeTabViewController: UITabBarController {
             
             
         }
-        
-        
-        
-        
+    }
+    
+    func addingAnObserever(){
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: NSNotification.Name(rawValue: NicknameNotif), object: nil)
+    }
+    
+    @objc func handleNotification(_ sender:Notification){
+        print(sender)
+        guard let value = sender.object as? String else {
+            return
+        }
+        print(value)
     }
     /*
      // MARK: - Navigation

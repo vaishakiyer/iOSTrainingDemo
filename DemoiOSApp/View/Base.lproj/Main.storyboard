@@ -395,16 +395,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qkg-6K-hxd">
-                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="629"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Cwr-Sc-UZo">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bu9-tv-uR6" firstAttribute="bottom" secondItem="Qkg-6K-hxd" secondAttribute="bottom" id="92E-YL-oh0"/>
-                            <constraint firstItem="Bu9-tv-uR6" firstAttribute="trailing" secondItem="Qkg-6K-hxd" secondAttribute="trailing" id="I3a-68-HGV"/>
-                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="leading" secondItem="Bu9-tv-uR6" secondAttribute="leading" id="jI8-nW-CEC"/>
-                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="top" secondItem="Bu9-tv-uR6" secondAttribute="top" id="ywS-uN-aU1"/>
+                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="trailing" secondItem="Bu9-tv-uR6" secondAttribute="trailing" id="8Q2-sC-0bN"/>
+                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="leading" secondItem="Bu9-tv-uR6" secondAttribute="leading" id="IXR-Is-B0M"/>
+                            <constraint firstItem="Cwr-Sc-UZo" firstAttribute="leading" secondItem="Bu9-tv-uR6" secondAttribute="leading" id="MHu-23-60W"/>
+                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="bottom" secondItem="Bu9-tv-uR6" secondAttribute="bottom" id="Y4g-b8-ky1"/>
+                            <constraint firstItem="Cwr-Sc-UZo" firstAttribute="trailing" secondItem="Bu9-tv-uR6" secondAttribute="trailing" id="f0a-Bu-cIW"/>
+                            <constraint firstItem="Qkg-6K-hxd" firstAttribute="top" secondItem="Cwr-Sc-UZo" secondAttribute="bottom" id="faE-eO-QcK"/>
+                            <constraint firstItem="Cwr-Sc-UZo" firstAttribute="top" secondItem="Bu9-tv-uR6" secondAttribute="top" id="lVw-nN-41z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bu9-tv-uR6"/>
                     </view>
@@ -415,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5x2-4D-Evm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.8550724637682" y="-194.19642857142856"/>
+            <point key="canvasLocation" x="1888.8" y="-194.33497536945814"/>
         </scene>
         <!--Add Item View Controller-->
         <scene sceneID="tAj-f1-TE3">

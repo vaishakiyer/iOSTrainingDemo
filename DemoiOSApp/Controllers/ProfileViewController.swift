@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
         
         user = Userdefault.loggedInUser()
         setup()
-        
         // Do any additional setup after loading the view.
     }
     

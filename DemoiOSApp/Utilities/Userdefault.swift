@@ -10,6 +10,7 @@ import Foundation
 
 private let kToken = "kToken"
 private let kUser = "kUser"
+let NicknameNotif = "NicknameNotif"
 
 class Userdefault{
     
@@ -48,4 +49,12 @@ class Userdefault{
         sharedInstance.synchronize()
     }
     
+}
+
+
+extension Data {
+    var hexString: String {
+        let hexString = map { String(format: "%02.2hhx", $0) }.joined()
+        return hexString
+    }
 }

@@ -86,6 +86,8 @@ class AddItemViewController: UIViewController {
     
     @objc func doneClicked(){
         
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NicknameNotif), object: titleTxt.text)
+        
         objCreated.title = titleTxt.text!
         objCreated.description = descTxt.text!
         delegate?.valuesToBePopulated(object: objCreated)
